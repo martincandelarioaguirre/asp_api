@@ -1,4 +1,6 @@
-﻿namespace API.Application
+﻿using API.Application.EndPoints;
+
+namespace API.Application
 {
     public static class WebApplicationHelper
     {
@@ -12,6 +14,7 @@
         {
             // Configure the HTTP request pipeline.
             app.UseHttpsRedirection();
+            app.useEndPointRoutes();
             return app;
         }
 
